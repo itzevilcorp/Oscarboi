@@ -82,3 +82,7 @@ let nightmareAlley = {
     imbd = 7.1
 }
 
+let hardpart runLength =
+    let hours = runLength / 60
+    let minutes = runLength % 60
+    sprintf "%dh %02dmin" hours minutes
