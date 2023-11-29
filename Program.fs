@@ -86,3 +86,11 @@ let hardpart runLength =
     let hours = runLength / 60
     let minutes = runLength % 60
     sprintf "%dh %02dmin" hours minutes
+
+let movies = [coda; belfast; dontLookUp; driveMyCar; dune; kingRichard; licoricePizza; nightmareAlley]
+
+
+let run = List.map (fun movie -> hardpart movie.RunLength) movies
+
+
+let oscarWinners = List.filter (fun movie -> movie.imbd > 7.4) movies
