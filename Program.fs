@@ -94,3 +94,16 @@ let run = List.map (fun movie -> hardpart movie.RunLength) movies
 
 
 let oscarWinners = List.filter (fun movie -> movie.imbd > 7.4) movies
+
+printfn "And the oscar goes to"
+oscarWinners |> List.iter (fun movie -> 
+    printfn "%s" movie.Name
+    printfn "rating: %.2f" movie.imbd
+    printfn ""
+
+)
+
+printfn "Time:"
+movies |> List.iter (fun movie -> 
+    printfn "%s  %s" movie.Name (hardpart movie.RunLength)
+)
